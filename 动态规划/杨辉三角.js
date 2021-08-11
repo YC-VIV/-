@@ -25,7 +25,7 @@
 
  var generate = function(numRows) {
 
-    var triangle = []
+    let triangle = []
     
     for( let i = 0 ; i < numRows ; i++ ){
         triangle[i] = []

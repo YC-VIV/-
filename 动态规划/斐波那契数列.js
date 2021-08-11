@@ -75,6 +75,7 @@ var fib3 = function(n)
 
     // 用三个数来代替数组
     // 其中，now相当于上一个方法中的dp[i],past则是dp[i-1],pastpast是dp[i-2]
+    // 在这里，pastpast、past、now也可以用一组数组的arr[0],arr[1],arr[2]来代替，这种思想叫“滚动数组”
     var pastpast = 0
     var past = 1
     var now = 1
