@@ -30,4 +30,14 @@
     }
 };
 
+var missingNumber2 = function(nums) {
+    
+    for( let i = 0 ; i < nums.length ; i++ ){
+        if( nums[i] != i )
+        { return i }
+    }
+
+    return nums.length
+};
+
 console.log(missingNumber([0,1,2,4]))
