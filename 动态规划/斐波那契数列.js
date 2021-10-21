@@ -54,6 +54,8 @@ var fib2 = function(n)
     if( n == 1 || n == 2 )
     { return 1 }
     else{
+
+        // 动态规划的出口
         dp[0] = 0
         dp[1] = dp[2] = 1
         for( let i=3 ; i<=n ; i++ ){

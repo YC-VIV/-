@@ -26,7 +26,17 @@
  * @param {number[]} prices
  * @return {number}
  */
+
  var maxProfit = function(prices) {
-    dp[0] = 0
-    
+    let low = prices[0]
+    let res = 0
+    for( let i = 1 ; i < prices.length ; i++ )
+    {
+        low = Math.min( low , prices[i] )
+        res = Math.max( res , prices[i]-low )
+        // console.log(low,res)
+    }
+    return res
 };
+
+console.log(maxProfit([7,1,5,3,6,4]))
