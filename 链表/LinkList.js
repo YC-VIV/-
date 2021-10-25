@@ -11,6 +11,8 @@ function ListNode( val ) {
     insert 插入新结点到链表的某个值的后面(或者插入到链表最后)
     remove 删除结点
     display 显示链表的元素
+
+    在实现上述方法时，注意考虑特殊情况，如：查询的元素不存在等等
 */
 function LinkList() {
     this.head = new ListNode('head')
@@ -29,6 +31,8 @@ function find( item ) {
     while( cur.val!=item )
     {
         cur = cur.next
+
+        // 找不到
         if( cur==null )
         {
             return -1
@@ -45,12 +49,12 @@ function findPrevious( item ) {
     { return -1 }
 
     while( (cur.next) && (cur.next.val != item) ) {
-        // 注意: cur.next!=undefined是考虑到查不到的情况
+        // 注意: cur.next!=undefined/null是考虑到查不到的情况
         cur = cur.next
-    }
 
-    if( cur.next == null )
-    { return -1 }
+        if( cur.next == null )
+        { return -1 }
+    }
     
     return cur
 }

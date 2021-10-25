@@ -50,6 +50,7 @@ function findLast() {
 function insert( val , preElement ) {
     let newElement = new ListNode(val)
 
+    // 考虑两种情况：1、没用第二参数，默认在最后插入；2、有第二参数，再第二参数后面插入
     if( preElement==undefined ) {
         let last = this.findLast()
         newElement.previous = last
@@ -75,6 +76,8 @@ function remove( val ) {
 
         element.previous = null
         element.next = null
+    }else{
+        return -1
     }
 }
 
