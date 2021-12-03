@@ -16,6 +16,9 @@
 const inorderTraversal = require('./inorder')
 const preorderTarversal = require('./preorder')
 const postorderTraversal = require('./postorder')
+const levelorderTraversal = require('./levelorder')
+
+const minDepth = require('./minDepth')
 
 // 定义结点
 function TreeNode(val,left,right) {
@@ -41,6 +44,9 @@ function show() {
     preorderTarversal 前序遍历
     inorderTraversal 中序遍历
     postorderTraversal 后序遍历
+    levelorderTraversal 层序遍历
+
+    minDepth 最小深度
 
 */
 
@@ -52,6 +58,8 @@ function BST() {
     this.preorderTarversal = preorderTarversal
     this.inorderTarversal = inorderTraversal
     this.postorderTraversal = postorderTraversal
+    this.levelorderTraversal = levelorderTraversal
+    this.minDepth = minDepth
 }
 
 function insert( data ) {
